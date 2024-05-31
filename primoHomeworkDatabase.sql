@@ -1,4 +1,4 @@
-drop database  pref_utenti;
+--drop database  pref_utenti;
 CREATE DATABASE IF NOT EXISTS pref_utenti;
 USE pref_utenti;
 CREATE TABLE domande_esistenziali (
