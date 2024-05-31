@@ -1,0 +1,135 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.allPage{
+    width: 100%;
+    height: 100%;
+}
+.allPage img{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.banner{
+    position: absolute;
+    width: 70%;
+    background-color: rgba(204, 199, 199, 0.9);
+    height: 80%;
+    top: 10%;
+    left: 15%;
+}
+
+.halfR{
+    width: 50%;
+    height: 100%;
+    background-color: hsla(23, 100%, 49%, 0.9); 
+
+}
+.halfL{
+    width: 50%;
+    height: 100%;
+
+    
+}
+.divisore{
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#fraseMotivazionale{
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 20px;
+    margin-top: 15%;
+}
+.halfR img{
+    margin-top: 15%;
+    margin-left: 25%;
+    height: 40%;
+    width: 50%;
+}
+
+.slider {
+    width: 50%;
+    margin-left: 25%;
+}
+.retribuzione{
+    width: 100%;
+    height: 15%;
+
+}
+.vantaggi{
+    margin-left: 25%;
+    width: 50%;
+    height: 49%;
+
+
+}
+.avvertenzaInPiccolo{
+    font-family: "Roboto";
+    font-size: 8px;
+    color: gray;
+}
+.vantaggio{
+    font-family: "Roboto";
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 30px;
+
+}
+.presentazioneVantaggi{
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: bold;
+}
+.orari_di_lavoro h3{
+    font-family: "Roboto";
+    font-size: 13px;
+    font-weight: bold;
+
+}
+.orari_di_lavoro{
+    margin-top: -10px;
+    display: flex;
+    margin-left: 25%;
+}
+#rangeOrario{
+    margin-left: 3%;
+}
+
+.Titolo{
+    text-align: center;
+    font-family: "Roboto";
+
+}
+.SecondoTitolo{
+    text-align: center;
+    font-family: "Roboto";
+
+}
+.cifraSoldi{
+    text-align: center;
+    width: 100%;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-top: 10%;
+    
+}
+.moneta{
+    font-family: "Roboto";
+    position: absolute;
+    right: 50.5%;
+    top: 27%;
+    font-weight: lighter;
+}
+.settimana{
+    text-align: center;
+    font-family: "Roboto";
+    margin-top: 5%;
+}

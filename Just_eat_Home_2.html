@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ordina online dai tuoi ristoranti preferiti I Just Eat</title>
+        <link rel="stylesheet" type="text/css" href="CSS_Just_Eat_2.css">
+        <script src="Just_Eat.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key="></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=AeXzJgCScMKfLKqTEWuxBPSonrYfBIP42PjdB3-q-krWewcvxqYCudI_ExQdW8iMYp6rmf0NTeRNQt22"></script>
+        <link rel="icon" type="image/png" href="images/icona.png">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+     
+        <div class="container">
+     
+            <header>
+                <ul>
+                   <li class="logo"> <a href="Just_eat_Home_2.html"> <img src="images/logo_just_eat.png"></a> </li>
+                   <li> 
+                        <a href=""> <h1 class="AgonyClass">Agonie Esistenziali </h1></a> 
+                        <a href="Agonie_Esistenziali.html"><div class="bottoneEsistenziale"></div></a>
+                   </li>
+                   <li>
+                        <a href=""> <h1 class="LavoraXnoi">Lavora per noi</h1></a>
+                        <a href="LavoraPerNoi.html"><div class="bottoneLavoro"></div></a>
+                   </li>
+                   <li>
+                        <a href=""><h1 id="id11" >Accedi</h1></a>
+                        <a href="http://localhost/LogInScreen.php"><div class="bottoneAccesso"></div></a>
+                    </li>
+                   <li><a> <img src="images/aiuto.png"></a></li>
+                   <li> <img src="images/bandiera.png"> </li>
+                   <li> <a href="logOut.php"><h2 class="logout">logout</h2></a> </li>
+                </ul>
+             
+                <div class="navbar_mobile">
+                  
+                    <div class="hamburger"> 
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                  
+                    </div>
+                    <div><a href="Just_Eat_Home_2.html"> <img src="images/logo_just_eat.png"></a></div>
+                
+                </div>
+                
+            </header>
+         
+            <div class="darkpage">
+                <div class="googleAPI" id="map"></div>
+            </div>
+            <div class="BannerWinner">
+                <h1>Congratulazioni!</h1>
+                <h2>Seleziona un numero da 1 a 13 e ottieni un premio!</h2>
+                <input type="number" id="number-input" min="1" max="13" placeholder="Inserisci un numero da 1 a 13">
+                <button id="submit-button">Invia</button>
+                <div class="vincita">
+                    <p id = "paragrafovincita"></p>
+                </div>
+            
+            </div>
+            <div class="fintoAcquisto">
+                <button id="my-paypal-button">Paga con PayPal</button>
+            </div>
+            <div id="data-container"></div>
+            <section>
+               
+                <div class="menuMobile">
+                    <div class="navbar_mobile">
+                  
+                        <div class="classeX">
+                            
+                           <img src="images/ImmagineX.png">
+          
+                        </div>
+                        
+                      
+                        <div><a href="Just_Eat_Home_2.html"> <img src="images/logo_just_eat.png"></a></div>
+
+                    </div>
+                    <ul>
+                        
+                        <li> <a class="linkMobili"> Ordine aziendale</a></li>
+                        <div class="divider"> </div>
+                        <li> <a class="linkMobili"> Diventa un rider Just Eat</a></li>
+                        <div class="divider"></div>
+                        <li> <a class="linkMobili"> Accedi </a> </li>
+                        <div class="divider"></div>
+                        <li> <a class="linkMobili">  Aiuto?</a> </li>
+                        <div class="divider"></div>
+                        <li> <a class="linkMobili"> Seleziona il tuo paese</a>  </li>
+                    </ul>
+                
+                </div>
+                <div class="bannerBandiere"> <img  src="images/MenuBandiere.png"></div>
+                <img src="images/panino.jpg">
+                <div class = "scatola_interna">
+                        <h1 class="titolo"> il bello e' prenderci gusto</h1>
+                        <h2 class="secondo_titolo"> Ordina online dai tuoi ristoranti preferiti
+                        </h2>
+                        <div class="riquadro1">
+                            <div class="riquadro2">
+                                 <input type="text" class="input-box" placeholder="Indirizzo di consegna">
+                                <button class="button"> Trova i ristoranti! </button>
+                            </div>
+                        </div>
+                        
+                </div>
+                <div class="boxAggiuntivo">
+                    <div class="bannerPerPreferiti">
+                        <img src="images/PiacerePizza.jpg">
+                        <img  id="immagine1" src="images/cuoreGrigio.png" class="imgCuoreGrigio" data-cibo-id="1" >
+                    </div>
+                    <div class="divider"></div>
+                    <div class="bannerPerPreferiti">
+                        <img src="images/PiacereSushi.jpg">
+                        <img id="immagine2" src="images/cuoreGrigio.png" class="imgCuoreGrigio" data-cibo-id="2">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="bannerPerPreferiti">
+                        <img src="images/PiacereTorta.jpg">
+                        <img id="immagine3" src="images/cuoreGrigio.png" class="imgCuoreGrigio" data-cibo-id="3">
+                        
+                    </div>
+                 
+
+                
+                </div>
+               
+
+                <div class="banner_app">
+                    <div> <img src="images/tel.png" ></div>
+                    <div class="interno_banner_app">
+                        <h1> il bello e' prenderci gusto </h1>
+                        <h2> Scarica l'app di Just Eat e ordina dove vuoi, qualunque cosa desideri.</h2>
+                        <a href="https://apps.apple.com/us/app/just-eat-food-delivery/id566347057" class="icone_mobile"><img src="images/appStore.png" > </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.justeat.app.it&hl=en&pli=1" class="icone_mobile"><img src="images/googleplay.png"> </a>
+                        <div>
+                            <a href="https://apps.apple.com/us/app/just-eat-food-delivery/id566347057"><img src="images/appStore.png" > </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.justeat.app.it&hl=en&pli=1"><img src="images/googleplay.png"> </a>
+                        </div>
+                   
+                    </div>
+                       
+                </div>
+
+            </section>
+            <footer>
+
+                <div class="appendice1">
+                    <div class="interno_appendice1">
+                        <p class="titolo_categoria"> Servizio Clienti </p>
+                        <ul class = "rimuovi_sottolineato">
+                            <li class="elemento_elenco"><a> Domande frequenti</a></li>
+                            <li class="elemento_elenco"><a> Accedi </a></li>
+                            <li class="elemento_elenco"><a> Registrati su Just Eat </a></li>
+                            <li class="elemento_elenco"><a> Miglior Prezzo Garantito </a></li>
+                            <li class="elemento_elenco"><a> Scarica l'app di Just Eat </a></li>
+                            <li class="elemento_elenco"><a> Segnala un problema sul contenuto </a></li>
+                        </ul>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="interno_appendice1">
+                        <p class="titolo_categoria"> Cucine </p>
+                        <ul class = "rimuovi_sottolineato">
+                            <li class="elemento_elenco"><a> Pizza </a></li>
+                            <li class="elemento_elenco"><a> Sushi </a></li>
+                            <li class="elemento_elenco"><a> Cibo cinese </a></li>
+                            <li class="elemento_elenco"><a> Kebab </a></li>
+                            <li class="elemento_elenco"><a> Gelato </a></li>
+                            <li class="elemento_elenco"><a> Dolci </a></li>
+                            <li class="elemento_elenco"><a> Cibo italiano </a></li>
+                            <li class="elemento_elenco"><a> Hamburger </a></li>
+                            <li class="elemento_elenco"><a> Panini </a></li>
+                            <li class="elemento_elenco"><a> Colazione </a></li>
+                            <li class="elemento_elenco"><a> Pollo </a></li>
+                            <li class="elemento_elenco"><a> Supermercato - Spesa online </a></li>
+                            <li class="elemento_elenco"><a> Cibo messicano </a></li>
+                            <li class="elemento_elenco"><a> Tutti i tipi di cucine </a></li>
+
+                        </ul>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="interno_appendice1">
+                        <p class="titolo_categoria"> Citta' </p>
+                        <ul class = "rimuovi_sottolineato">
+                            <li class="elemento_elenco"><a> Roma </a></li>
+                            <li class="elemento_elenco"><a> Milano</a></li>
+                            <li class="elemento_elenco"><a> Bologna </a></li>
+                            <li class="elemento_elenco"><a> Genova </a></li>
+                            <li class="elemento_elenco"><a> Torino </a></li>
+                            <li class="elemento_elenco"><a> Ferrara </a></li>
+                            <li class="elemento_elenco"><a> Trieste </a></li>
+                            <li class="elemento_elenco"><a> Padova </a></li>
+                            <li class="elemento_elenco"><a> Parma </a></li>
+                            <li class="elemento_elenco"><a> Pisa  </a></li>
+                            <li class="elemento_elenco"><a> Firenze </a></li>
+                            <li class="elemento_elenco"><a> Palermo </a></li>
+                            <li class="elemento_elenco"><a> Napoli </a></li>
+                            <li class="elemento_elenco"><a> Tutte le citta' </a></li>
+
+                        </ul>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="interno_appendice1">
+                        <p class="titolo_categoria"> Catene </p>
+                        <ul class = "rimuovi_sottolineato">
+                            <li class="elemento_elenco"><a> Alice pizza </a></li>
+                            <li class="elemento_elenco"><a> Burger King</a></li>
+                            <li class="elemento_elenco"><a> Carrefour </a></li>
+                            <li class="elemento_elenco"><a> Fratelli la Bufala </a></li>
+                            <li class="elemento_elenco"><a> Hamerica's </a></li>
+                            <li class="elemento_elenco"><a> La Piadineria</a></li>
+                            <li class="elemento_elenco"><a> Mcdonald's </a></li>
+                            <li class="elemento_elenco"><a> Old Wild West </a></li>
+                            <li class="elemento_elenco"><a> Poke House </a></li>
+                            <li class="elemento_elenco"><a> StarBucks </a></li>
+                            <li class="elemento_elenco"><a> Sushiko </a></li>
+                            <li class="elemento_elenco"><a> Sushi </a></li>
+                            <li class="elemento_elenco"><a> Tutte le catene </a></li>
+    
+                        </ul>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="interno_appendice1">
+                        <p class="titolo_categoria"> Chi Siamo </p>
+                        <ul class = "rimuovi_sottolineato">
+                            <li class="elemento_elenco"><a> Informazioni su Just Eat </a></li>
+                            <li class="elemento_elenco"><a> Diventa partner di Just Eat </a></li>
+                            <li class="elemento_elenco"><a> Diventa un rider su Just Eat</a></li>
+                            <li class="elemento_elenco"><a> Programma bug Bounty </a></li>
+                            <li class="elemento_elenco"><a> Partner Center </a></li>
+                            <li class="elemento_elenco"><a> Lavora con noi </a></li>
+                            <li class="elemento_elenco"><a> Media & Press</a></li>
+                            <li class="elemento_elenco"><a> Informativa sulla Privacy </a></li>
+                            <li class="elemento_elenco"><a> Politica dei cookie </a></li>
+                            <li class="elemento_elenco"><a> Termini e Condizioni </a></li>
+                            <li class="elemento_elenco"><a> Linea diretta per l'Etica </a></li>
+                            <li class="elemento_elenco"><a> Codice Etico</a></li>
+                            <li class="elemento_elenco"><a> Mappa del cibo a domicilio in Italia in 2023</a></li>
+                            <li class="elemento_elenco"><a> Informazioni legali</a></li>
+                            <li class="elemento_elenco"><a> Sostenibilita' </a></li>
+                            <li class="elemento_elenco"><a> Qualcuno ha detto Just Eat </a></li>
+                            <li class="elemento_elenco"><a> Vinci i biglietti UEFA Champions League </a></li>
+                                      
+                        </ul>
+                    </div>
+    
+
+
+                 
+
+                    
+                </div>
+                <div class="appendice2">
+                    <div class="interno_appendice2">
+                        <p> Scarica l'app</p>
+                        <a href = "https://apps.apple.com/us/app/just-eat-food-delivery/id566347057"><img src="images/appStore.png" > </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.justeat.app.it&hl=en&pli=1"><img src="images/googleplay.png"> </a>
+                    </div>
+                    <div class="interno_appendice2"> Feedback
+                        <p class="supplica"> Aiutaci a migliorare il nostro sito</p>
+                        <u class="finto_link"> Invia feedback </u>
+                    </div>
+                    <div class="interno_appendice2_secondo"> Seguici su:
+                        <div>
+                        <a href="https://www.facebook.com/justeatitaly"> <img src="images/facebook.png" ></a>
+                        <a href="https://twitter.com/JustEat_it"> <img src="images/x.png"></a>
+                        <a href="https://www.justeat.it/blog"> <img src="images/blog.png"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="appendice3">
+                    <img src="images/fine.png" class="immagineDesktop">
+                    <img src="images/fine_mobile.png" class="immagineMobile">
+                    <u class="finto_link2"> controlla le mie preferenze sui cookie</u>
+                </div>
+
+                
+            </footer> 
+
+
+            
+            
+        </div>
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

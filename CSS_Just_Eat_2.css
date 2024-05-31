@@ -1,0 +1,704 @@
+/*testato con larghezza 1535*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+ }
+
+.logo{
+    margin-top: 0.2%;
+    margin-left: 9.3%;
+    padding-right: 23%; 
+}
+
+header{
+    display: flex;
+    height: auto;
+    width: 100%;
+    box-shadow:  0 10px 10px rgba(0,0,0,0.10);
+    position: relative;
+
+}
+
+
+header ul {
+    width: 100%;
+    height: auto;
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    align-items: flex-start;
+}
+
+section{
+    width: 100%;
+    height: auto;
+}
+section img{
+    width: 100%;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+.navbar_mobile {
+    display: none; 
+}
+
+.scatola_interna{
+    background-color: white;
+    position: relative;
+    top: -20%;
+    width: 52%;
+    margin-left: 25%;
+    height: 240px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16);
+    border-radius: 10px;
+
+}
+
+.boxAggiuntivo{
+    position: absolute;
+    top: 15%;
+    height: 40%;
+    width: 25%;
+    background-color: white;
+    border-radius: 5px;
+
+}
+.bannerPerPreferiti{
+    display: flex;
+    height: 33.2%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+
+}
+.bannerPerPreferiti img{
+    width: 70%;
+    height: 100%;
+}
+.imgCuoreGrigio{
+    width: 10% !important;
+    height: 35% !important;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.titolo{
+    padding-top: 16px;
+    font-size: 42px;
+    font-family: Arial;
+    color: #fb6100;
+    font-weight: 800;
+    text-align: center;
+   
+
+}
+.secondo_titolo{
+    margin-top: -10px ;
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial;
+    font-weight: 1;
+    color: rgb(105, 102, 102);
+
+}
+
+
+.input-box{
+    border: none;
+    width: 330px;
+    padding-right: 40 px;
+    margin-left: 30px;
+ 
+ 
+ }
+ .riquadro2{
+   margin-top: 4px;
+   text-align: center;
+ 
+ }
+ .riquadro1{
+     margin-top: 1%;
+     border: 1px solid gray;
+     text-align: center;
+     height: 63px;
+     border-radius: 40px;
+     margin-left: 12%;
+     margin-right: 12%;
+ }
+ 
+ .button{
+    margin-left: 25px;
+    border: none;
+    width: 200px;
+    height: 55px;
+    background-color: hsla(23, 100%, 49%, 0.90);
+    border-radius: 30px;
+    color: white;
+    font-family: Arial; 
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+ 
+ }
+ .banner_app{
+    position: relative;
+    display: flex; 
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -10%;
+
+ }
+ .interno_banner_app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-left: 12%;
+
+ }
+ .banner_app img{
+    width: auto;
+ }
+ .banner_app h1{
+    font-size: 30px;
+    font-family: Arial;
+    color: black;
+    font-weight: 1000;
+    text-align: center;
+ }
+ .banner_app h2{
+    font-size: 15px;
+    margin-top: -2%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-family: Arial;
+    font-weight: lighter;
+    color: rgb(105, 102, 102);
+ }
+
+
+ 
+ footer{
+    margin-top: -18%;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    background-color: white;
+    z-index: -1;
+}
+.appendice1{
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 610px;
+    margin-top: 300px;
+    background-color: hsla(190, 14%, 16%, 0.09);
+}
+.appendice2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 180px;
+    background-color: hsla(190, 14%, 16%, 0.04);
+}
+.appendice3{
+    height: 120px;
+    background-color: hsla(190, 14%, 16%, 0.09);
+    z-index: 0;
+}
+
+.interno_appendice1{
+    margin: 20px;
+}
+.titolo_categoria{
+    font-family: "Roboto"; 
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 28px;
+}
+.rimuovi_sottolineato{
+    list-style-type: none;
+
+}
+.elemento_elenco{
+    padding-bottom: 15px;
+    font-family: Arial;
+    font-size: 13px;
+}
+a {
+    color: inherit; 
+}
+.scarica{
+    font-family: Arial;
+
+}
+
+.finto_link2{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial;
+    margin-left: 650px;
+    cursor: pointer;
+    
+}
+
+.immagineMobile{
+    display: none;
+
+}
+.interno_appendice2{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 15px;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+}
+.interno_appendice2 a{
+    text-decoration: none;
+
+}
+.interno_appendice2_secondo{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 15px;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.interno_appendice2 img{
+    max-width: 130px;
+}
+.supplica{
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: normal;
+}
+.interno_appendice2 u{
+   cursor: pointer;
+   font-family: Arial;
+   font-size: 14px;
+   font-weight: normal;
+}
+.interno_appendice2_secondo img{
+    max-width: 30px;
+    margin: 10px;
+
+}
+.interno_banner_app div a{
+    text-decoration: none;
+}
+.icone_mobile {
+   display: none;
+
+}
+.divider{
+    display: block;
+    height: 1px;
+    background-color: rgba(46, 42, 42, 0.5);
+}
+.bannerBandiere{
+    display: none;
+    width: 410px;
+    height: 655px;
+    position: absolute;
+    z-index: 40;
+    right: 10%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 3px rgba(0,0,0,0.16);
+}
+.bannerBandiere img{
+    width: 90%;
+    height: 95%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.classe_data{
+    position: absolute; 
+    z-index: 50; 
+    top: 30px; 
+    margin-left: 30%;
+    background-color: hsla(23, 100%, 49%, 0.50);
+
+
+}
+.menuMobile{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 99;
+    top: 0;
+}
+.menuMobile ul{
+    list-style-type: none; 
+    height: auto;
+}
+.menuMobile li{
+    height: 40px;
+    margin-top: 10px;
+}
+.linkMobili{
+    font-family: arial;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+#id11{
+    font-family: arial;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 31px;
+    padding-right: 10px;
+  
+}
+.logout{
+    display: none;
+    font-size: 16px;
+    margin-left: 40px;
+    margin-top: 28px;
+    font-weight: lighter;
+
+}
+.AgonyClass{
+    font-family: arial;
+    margin-left: 70px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 31px;
+    padding-right: 40px;
+}
+.LavoraXnoi{
+    font-family: arial;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 31px;
+    padding-right: 40px;
+}
+
+.bottoneAccesso{
+    width: 60px;
+    height: 50px;
+    position: fixed;
+    z-index: 0;
+    top: 15px;
+    background-color: hsla(0, 0%, 0%, 0.15);
+    border-radius: 25%;
+    right: 363px;
+    display: none;
+}
+.bottoneEsistenziale{
+    width: 155px;
+    height: 50px;
+    position: fixed;
+    z-index: 0;
+    top: 15px;
+    background-color: hsla(0, 0%, 0%, 0.15);
+    border-radius: 12%;
+    right: 605px;
+    display: none;
+
+}
+.bottoneLavoro{
+    width: 120px;
+    height: 50px;
+    position: fixed;
+    z-index: 0;
+    top: 15px;
+    background-color: hsla(0, 0%, 0%, 0.15);
+    border-radius: 12%;
+    right: 455px;
+    display: none;
+
+}
+.darkpage{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, 0.50);
+    z-index: 999;
+
+}
+.googleAPI{
+    position: absolute;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 11%;
+    width: 60%;
+    height: 60%;
+    background-color: white;
+}
+.BannerWinner{
+    width: 25%;
+    height: 35%;
+    right: 0%;
+    margin-top: 10%;
+    position: absolute;
+    z-index: 30;
+    background-color: white;
+}
+.vincita{
+    background-color: rgb(250, 100, 0);
+    width: 100%;
+
+
+}
+.fintoAcquisto{
+    display: none;
+    background-color: white;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    z-index: 30;
+    margin-top: 33%;
+    border: 2px solid black;
+}
+#my-paypal-button{
+    font-family: Arial;
+    width: 40%;
+    height: 30%;
+    margin-left: 27%;
+    background-color: hsla(23, 100%, 49%, 0.90);
+    margin-top: 20%;
+    cursor: pointer;
+
+}
+
+/* design mobile testato in 667px*/
+
+@media (max-width: 768px) {
+    .BannerWinner{
+        display: none;
+    }
+    .fintoAcquisto{
+        display: none;
+    }
+    .bottoneAccesso{
+        display: none;
+    }
+    .classe_data{
+        display: none;
+    }
+    .nuovaClasse {
+        display:none;
+    }
+    .navbar_mobile {
+        display: flex;
+        align-items: center;
+        margin-left: 2%;
+        width: 100%;
+        height: 55px;
+       
+    }
+
+    header ul {
+        display: none; 
+    }
+    .hamburger {
+      
+        display: inline-block;
+        width: 25px; 
+        height: 23px; 
+        cursor: pointer;
+        position: relative;
+        font-size: 2rem;
+        margin-right: 35%;
+
+        
+    }
+    .classeX {
+        width: 30px; 
+        height: 25px; 
+        cursor: pointer;
+        position: relative;
+        margin-right: 35%;
+    }
+    .classeX img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+ 
+    .hamburger div {
+
+        width: 100%;
+        height: 2px;
+        background-color: #fb6100; /* Colore delle linee dell'icona */
+        margin: 5px;
+        margin-left: 0;
+    }
+    .navbar_mobile img{
+        width: 60%;
+        height: auto;
+        margin-top: 4%;
+
+    }
+    .scatola_interna{
+        width: 95%;
+        margin-left: 2.5%;
+        top: -13.6%;
+        height: 230px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+        border-radius: 10px;
+    }
+    
+
+    .titolo{
+        font-size: 40px;
+    }
+    
+    .riquadro2{
+        margin-top: 4px;
+        text-align: center;
+      
+      }
+      .riquadro1{
+
+          margin-left: 1%;
+          margin-right: 1%;
+      }
+      
+      .button{
+         margin-left: 25px;
+         border: none;
+         width: 200px;
+         height: 55px;
+         background-color: hsla(23, 100%, 49%, 0.90);
+         border-radius: 30px;
+         color: white;
+         font-family: Arial; 
+         font-weight: 500;
+         font-size: 20px;
+         cursor: pointer;
+      
+      }
+
+      .input-box{
+        border: none;
+        width: 30%;  
+        padding-right: 26.5%;  
+     
+     }
+     .banner_app{
+        display: flex; 
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: -10%;
+    
+     }
+     .interno_banner_app{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+        margin-right: 5%;
+    
+     }
+     .banner_app  h1{
+        font-size: 15px;
+        font-family: Arial;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+     }
+     .banner_app  h2{
+        font-size: 15px;
+        text-align: center;
+        font-family: Arial;
+        font-weight: 1;
+        color: rgb(105, 102, 102);
+     }
+     footer{
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        
+     }
+    .appendice1  {
+        display: block;
+        margin-top: 0;
+        height: 55%;
+    }
+    .appendice2  {
+        display: block;
+        height: 300px;
+    }
+    .appendice3{
+        height: 90px;
+    }
+    .finto_link2{
+        margin: 0;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: Arial;
+        cursor: pointer;
+        margin-left: 30%;
+        padding-top: 5%;
+        
+    }
+    .appendice3 img{
+        width: 100%;
+    }
+  
+    .immagineDesktop{
+
+        display: none;
+    }
+    .immagineMobile{
+        display: block;
+        width: 100%;
+    }
+    .interno_appendice2{
+        padding-left: 10px;
+    }
+    .interno_appendice2_secondo{
+        padding-left: 10px;
+    }
+    .interno_appendice1{
+        margin: 0;
+        cursor: pointer;
+    }
+    .rimuovi_sottolineato{
+        display: none;
+    }
+  
+    .icone_mobile {
+        display: block;
+     
+     }
+     .interno_banner_app div a{
+        display: none;
+    }
+    .boxAggiuntivo{
+        display:none;
+    }
+    .divider{
+        background-color: rgba(46, 42, 42, 0.082);
+    }
+
+}

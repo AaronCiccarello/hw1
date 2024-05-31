@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+}
+
+.AllPage img{
+    width: 100%;
+    height: 100%;
+}
+.AccessBanner{
+    width: 30%;
+    height: 60%;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    border-radius: 5px;
+    border: 2px solid black;
+    
+
+}
+.Title{
+    font-family: "Shadows Into Light";
+    text-align: center;
+}
+#submit{
+ 
+   margin-top: 10%;
+   margin-left: 44%;
+   font-family: "Shadows Into Light";
+    font-weight: bold;
+
+}
+.input-boxUsername{
+    margin-top: 5%;
+    font-family: "Shadows Into Light";
+    font-weight: bold;
+}
+
+.input-boxPassword{
+    margin-top: 5%;
+    font-family: "Shadows Into Light";
+    font-weight: bold;
+
+}
+.boxUsername{
+    text-align: center;
+}
+.boxPassword{
+    text-align: center;
+}
+.registrazione{
+    position: absolute;
+    bottom: 10%;
+    font-family: "Shadows Into Light";
+    left: 21%;
+    
+}
