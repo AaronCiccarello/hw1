@@ -33,8 +33,17 @@ form.onsubmit = async function (e){
             localStorage.setItem('loggedIn', 'true');
             window.location.href = 'Just_eat_Home_2.html';
         } else {
-            // Se c'è stato un errore, mostra un messaggio di errore
             paragrafo.textContent = 'Login failed. Please try again.';
         }
     }
 }
+
+window.addEventListener('resize', function() {
+    const imgElement = document.getElementById('background-image');
+    if (window.innerWidth < 768) {
+        imgElement.src = 'images/wall.png';
+    } else {
+        imgElement.src = 'images/wallD.png';
+    }
+});
+window.dispatchEvent(new Event('resize'));

@@ -47,6 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
         <script src="SignUpScreen.js" defer></script>
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1">
     </head>
 
     <body>
@@ -56,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             unset($_SESSION['error']);
                     }
             ?>
-        <div class="AllPage"> <img src="images/wallD.png">
+        <div class="AllPage"> <img src="images/wallD.png" id="background-image">
             <div class="AccessBanner"> 
 
                 <h1 class="Title"> Subscribe </h1>
@@ -85,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </form>
                 <p class =  "error"></p>
                 
-
+                    <a href="http://localhost/LogInScreen.php" class="ritornologIn"> torna al login </a>
 
             </div>
         </div>

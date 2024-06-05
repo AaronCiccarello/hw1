@@ -71,20 +71,22 @@ for (let i = 0; i < immagini.length; i++) {
 
 const cuori = document.querySelectorAll('.boxAggiuntivo .imgCuoreGrigio');
 document.addEventListener('DOMContentLoaded', function () {
-    const numberInput = document.getElementById('number-input');
-    const submitButton = document.getElementById('submit-button');
-    const vincitaParagraph = document.getElementById('paragrafovincita');
-    const proxyUrl = 'https://cors.bridged.cc/';
-
-    submitButton.addEventListener('click', function () {
-        const selectedNumber = parseInt(numberInput.value);
-        let userId = localStorage.getItem('userId');
-        if (!userId) {
-
-            vincitaParagraph.textContent = 'Accedi e riscatta il tuo premio!';
-        }
-        if (selectedNumber >= 1 && selectedNumber <= 13) {
-            fetch(proxyUrl + `https://api.restful-api.dev/objects/${selectedNumber}`)
+    const numberInputs = document.getElementsByClassName('dimBarraRicercaDk');
+    const submitButtons = document.getElementsByClassName('submit-button');
+    const vincitaParagraphs = document.getElementsByClassName('paragrafovincita');
+    const proxyUrl = 'https://thingproxy.freeboard.io/fetch/';
+    Array.from(submitButtons).forEach((submitButton,index) => {
+        submitButton.addEventListener('click', function () {
+            const selectedNumber = parseInt(numberInputs[index].value);
+            let userId = localStorage.getItem('userId');
+            if (!userId) {
+                Array.from(vincitaParagraphs).forEach(paragraph => {
+                    paragraph.textContent = 'Accedi e riscatta il tuo premio!';
+                });
+    
+            }
+            if (selectedNumber >= 1 && selectedNumber <= 13) {
+                 fetch(proxyUrl + `https://api.restful-api.dev/objects/${selectedNumber}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Errore nella richiesta');
@@ -93,34 +95,35 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 .then(data => {
 
-                    vincitaParagraph.textContent = `hai vinto: ${data.name}`;
+                    Array.from(vincitaParagraphs).forEach(paragraph => {
+                        paragraph.textContent = `hai vinto: ${data.name}`;
+                    });
     
-
-                    let userId = localStorage.getItem('userId');
                     if (userId) {
                         fetch('saveObject.php', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                                userId: userId,
-                                objectName: data.name
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                    userId: userId,
+                                    objectName: data.name
+                                })
                             })
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log('Success:', data);
-                        })
-                        .catch((error) => {
-                            console.error('Error:', error);
-                        });
-                    } 
-                })
-                .catch(error => console.error('Error:', error));
-        } else {
-            alert('Inserisci un numero compreso tra 1 e 13');
-        }
+                            .then(response => response.json())
+                            .then(data => {
+                                console.log('Success:', data);
+                            })
+                            .catch((error) => {
+                                console.error('Error:', error);
+                            });
+                        } 
+                    })
+                    .catch(error => console.error('Error:', error));
+             } else {
+                 alert('Inserisci un numero compreso tra 1 e 13');
+            }
+        });
     });
 });
 async function updateFavorite(userId, foodId, isFavorite) {
@@ -322,6 +325,7 @@ document.addEventListener('DOMContentLoaded', function () {
     classeX.addEventListener('click', function () {
         menuMobile.style.display = 'none'; 
         });
+        
  });
 
 
@@ -376,6 +380,8 @@ workElement.addEventListener('mouseout', function() {
     const bottoneAccesso = document.querySelector('.bottoneAccesso');
     const botAccesso = document.querySelector('#id11');
     const logoutElement = document.querySelector('.logout');
+    const salutoAccessoM = document.querySelector('#salutoAccessoM');
+    const logoutM = document.querySelector('.logoutM');
 
     function showButton() {
         bottoneAccesso.style.display = 'block';
@@ -387,10 +393,14 @@ workElement.addEventListener('mouseout', function() {
 
     if (username && loggedIn === 'true') {
         document.getElementById('id11').textContent = 'Ciao ' + username;
+        salutoAccessoM.textContent = 'Ciao ' + username;
+        salutoAccessoM.removeAttribute('href');
         bottoneAccesso.style.display = 'none';
         logoutElement.style.display = 'block';
+        logoutM.style.display = 'block';
         botAccesso.removeEventListener('mouseover', showButton);
         botAccesso.removeEventListener('mouseout', hideButton);
+        
     } else {
         botAccesso.addEventListener('mouseover', showButton);
         botAccesso.addEventListener('mouseout', hideButton);
@@ -412,6 +422,8 @@ workElement.addEventListener('mouseout', function() {
             localStorage.removeItem('username');
             localStorage.removeItem('loggedIn');
             this.style.display = 'none';
+            salutoAccessoM.textContent = 'Accedi';
+            salutoAccessoM.setAttribute('href', 'LogInScreen.php');
             bottoneAccesso.style.display = 'none';
             document.getElementById('id11').textContent = 'Accedi';
             botAccesso.addEventListener('mouseover', showButton);
@@ -421,6 +433,30 @@ workElement.addEventListener('mouseout', function() {
             console.error('Logout failed');
         }
     });
+    logoutM.addEventListener('click', async function(event) {
+    event.preventDefault(); 
+    localStorage.removeItem('userId');
+    localStorage.removeItem('username');
+    const cuori = document.querySelectorAll('.boxAggiuntivo .imgCuoreGrigio');
+    cuori.forEach(cuore => {
+        cuore.src = 'images/cuoreGrigio.png'; 
+    });
+
+    const response = await fetch('logout.php');
+    if (response.ok) {
+        localStorage.removeItem('username');
+        localStorage.removeItem('loggedIn');
+        this.style.display = 'none';
+        bottoneAccesso.style.display = 'none';
+        document.getElementById('id11').textContent = 'Accedi';
+        salutoAccessoM.textContent = 'Accedi';
+        salutoAccessoM.setAttribute('href', 'LogInScreen.php');
+        botAccesso.addEventListener('mouseover', showButton);
+        botAccesso.addEventListener('mouseout', hideButton);
+    } else {
+        console.error('Logout failed');
+    }
+});
 
     let pos = {lat: 37.5242796, lng: 15.0684312};
     let map = new google.maps.Map(document.getElementById('map'), {center: pos, zoom: 15});

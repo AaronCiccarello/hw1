@@ -60,3 +60,18 @@ body{
    font-family: "Shadows Into Light";
    font-weight:  bold;
 }
+.ritornologIn{
+    text-align : center;
+    font-family: "Shadows Into Light";
+    font-weight:  bold;
+    bottom: 0;
+    left: 41%;
+    position: absolute;
+}
+@media (max-width: 768px) {
+    .AccessBanner{
+        width: 70%;
+        left: 15%;
+    }
+
+}

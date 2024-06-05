@@ -28,3 +28,13 @@ form.onsubmit = function(e) {
         paragrafo.textContent = 'Password must be longer than 8 elements, contain at least one uppercase letter, one number, and one special character!';
     }
 };
+
+window.addEventListener('resize', function() {
+    const imgElement = document.getElementById('background-image');
+    if (window.innerWidth < 768) {
+        imgElement.src = 'images/wall.png';
+    } else {
+        imgElement.src = 'images/wallD.png';
+    }
+});
+window.dispatchEvent(new Event('resize'));

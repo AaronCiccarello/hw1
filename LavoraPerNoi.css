@@ -133,3 +133,38 @@ html, body {
     font-family: "Roboto";
     margin-top: 5%;
 }
+@media (max-width: 768px) {
+    .banner{
+      width: 90%;
+      left: 5%;
+      height: 80%;
+    }
+    .vantaggi{
+        width: 90%;
+        margin-left: 5%;
+        height: 36%;
+    }
+    .vantaggio{
+
+        margin-bottom: 10px;
+    
+    }
+    .halfR img{
+        margin-left: 15%;
+        height: 40%;
+        width: 70%;
+    }
+    .moneta{
+        font-family: "Roboto";
+        position: absolute;
+        right: 50.5%;
+        top: 37%;
+        font-weight: lighter;
+    }
+    .cifraSoldi{
+        font-size: 11px;
+        
+    }
+}
+
+

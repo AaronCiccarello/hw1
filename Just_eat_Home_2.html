@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="CSS_Just_Eat_2.css">
         <script src="Just_Eat.js" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key="></script>
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCAyp81v4Y03V347uWl5QPULUtJCfGDtxM"></script>
         <script src="https://www.paypal.com/sdk/js?client-id=AeXzJgCScMKfLKqTEWuxBPSonrYfBIP42PjdB3-q-krWewcvxqYCudI_ExQdW8iMYp6rmf0NTeRNQt22"></script>
         <link rel="icon" type="image/png" href="images/icona.png">
         <meta name="viewport"
@@ -22,11 +22,11 @@
                 <ul>
                    <li class="logo"> <a href="Just_eat_Home_2.html"> <img src="images/logo_just_eat.png"></a> </li>
                    <li> 
-                        <a href=""> <h1 class="AgonyClass">Agonie Esistenziali </h1></a> 
+                        <a href="Agonie_Esistenziali.html"> <h1 class="AgonyClass">Agonie Esistenziali </h1></a> 
                         <a href="Agonie_Esistenziali.html"><div class="bottoneEsistenziale"></div></a>
                    </li>
                    <li>
-                        <a href=""> <h1 class="LavoraXnoi">Lavora per noi</h1></a>
+                        <a href="LavoraPerNoi.html"> <h1 class="LavoraXnoi">Lavora per noi</h1></a>
                         <a href="LavoraPerNoi.html"><div class="bottoneLavoro"></div></a>
                    </li>
                    <li>
@@ -58,10 +58,10 @@
             <div class="BannerWinner">
                 <h1>Congratulazioni!</h1>
                 <h2>Seleziona un numero da 1 a 13 e ottieni un premio!</h2>
-                <input type="number" id="number-input" min="1" max="13" placeholder="Inserisci un numero da 1 a 13">
-                <button id="submit-button">Invia</button>
+                <input class="dimBarraRicercaDk"   placeholder="Inserisci un numero da 1 a 13">
+                <button class="submit-button">Invia</button>
                 <div class="vincita">
-                    <p id = "paragrafovincita"></p>
+                    <p class = "paragrafovincita"></p>
                 </div>
             
             </div>
@@ -86,15 +86,26 @@
                     </div>
                     <ul>
                         
-                        <li> <a class="linkMobili"> Ordine aziendale</a></li>
+                        <li> <a class="linkMobili" href="Agonie_Esistenziali.html"> Agonie Esistenziali</a></li>
                         <div class="divider"> </div>
-                        <li> <a class="linkMobili"> Diventa un rider Just Eat</a></li>
+                        <li> <a class="linkMobili" href="LavoraPerNoi.html">Lavora per noi </a></li>
                         <div class="divider"></div>
-                        <li> <a class="linkMobili"> Accedi </a> </li>
+                        <li> <a class="linkMobili" id="salutoAccessoM" href="LogInScreen.php"> Accedi </a> </li>
                         <div class="divider"></div>
                         <li> <a class="linkMobili">  Aiuto?</a> </li>
                         <div class="divider"></div>
                         <li> <a class="linkMobili"> Seleziona il tuo paese</a>  </li>
+
+                        <li> 
+                            <h1>Congratulazioni!</h1>
+                            <h2>Seleziona un numero da 1 a 13 e ottieni un premio!</h2>
+                            <input  class="dimBarraRicercaDk"   placeholder="Inserisci un numero da 1 a 13">
+                            <button class="submit-button">Invia</button>
+                            <div class="vincita">
+                                <p class = "paragrafovincita"></p>
+                            </div></li>
+                        
+                       <li><a href="logOut.php"><h2 class="logoutM">logout</h2></a></li>
                     </ul>
                 
                 </div>
